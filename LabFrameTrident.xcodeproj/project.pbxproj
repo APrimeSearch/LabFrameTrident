@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		E1CEFBB31A4090C900B21849 /* LabFrameTrident */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LabFrameTrident; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CEFBB61A4090C900B21849 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E1CEFBBE1A40935E00B21849 /* EventGenerator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = EventGenerator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				E1CEFBB61A4090C900B21849 /* main.cpp */,
+				E1CEFBBE1A40935E00B21849 /* EventGenerator.h */,
 			);
 			path = LabFrameTrident;
 			sourceTree = "<group>";
