@@ -26,6 +26,12 @@
 		E1CEFBB31A4090C900B21849 /* LabFrameTrident */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LabFrameTrident; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CEFBB61A4090C900B21849 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E1CEFBBE1A40935E00B21849 /* EventGenerator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = EventGenerator.h; sourceTree = "<group>"; };
+		E1CEFBBF1A4097A400B21849 /* Event.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = Event.h; sourceTree = "<group>"; };
+		E1CEFBC01A4098EB00B21849 /* PhaseSpaceSelector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = PhaseSpaceSelector.h; sourceTree = "<group>"; };
+		E1CEFBC11A4098F900B21849 /* PhysicsProcess.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = PhysicsProcess.h; sourceTree = "<group>"; };
+		E1CEFBC21A40993200B21849 /* ElectronTridentProcess.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = ElectronTridentProcess.h; sourceTree = "<group>"; };
+		E1CEFBC31A409AA700B21849 /* GenerationStatistics.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = GenerationStatistics.h; sourceTree = "<group>"; };
+		E1CEFBC41A409B1600B21849 /* Particle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = Particle.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,12 @@
 			children = (
 				E1CEFBB61A4090C900B21849 /* main.cpp */,
 				E1CEFBBE1A40935E00B21849 /* EventGenerator.h */,
+				E1CEFBC31A409AA700B21849 /* GenerationStatistics.h */,
+				E1CEFBC41A409B1600B21849 /* Particle.h */,
+				E1CEFBC11A4098F900B21849 /* PhysicsProcess.h */,
+				E1CEFBC21A40993200B21849 /* ElectronTridentProcess.h */,
+				E1CEFBC01A4098EB00B21849 /* PhaseSpaceSelector.h */,
+				E1CEFBBF1A4097A400B21849 /* Event.h */,
 			);
 			path = LabFrameTrident;
 			sourceTree = "<group>";

@@ -9,6 +9,10 @@
 #ifndef LabFrameTrident_EventGenerator_h
 #define LabFrameTrident_EventGenerator_h
 
+#include "PhysicsProcess.h"
+#include "PhaseSpaceSelector.h"
+#include "GenerationStatistics.h"
+
 class EventGenerator
 {
 public:
@@ -16,8 +20,8 @@ public:
     EventGenerator(PhaseSpaceSelector& ps, PhysicsProcess);
     Event& makeEvent() const;
     
-    
-// Local data
+    void displayStatisics() const;
+    bool stopped() const { return stopped_};
    
 protected:
     // Members
@@ -25,10 +29,17 @@ protected:
     double weight(Event& e) const;
     
 private:
+    // Data
     const PhaseSpaceSelector& _allowedPhaseSpace;
     const PhysicsProcess& _processToGenerate;
     
-    GenerationStatistics
+    mutable GenerationStatistics _myStatistics;
+    
+    int stopConditionCheckFrequency_;
+    bool stopped_;
+    sdk::list<StopCondition*> stopConditions_;
+    
+    
     
 };
 
