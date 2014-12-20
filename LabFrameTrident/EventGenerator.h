@@ -9,37 +9,45 @@
 #ifndef LabFrameTrident_EventGenerator_h
 #define LabFrameTrident_EventGenerator_h
 
-#include "PhysicsProcess.h"
 #include "PhaseSpaceSelector.h"
 #include "GenerationStatistics.h"
+#include "Event.h"
+#include "DebugLevel.h"
 
 class EventGenerator
 {
 public:
     // Constructor
-    EventGenerator(PhaseSpaceSelector& ps, PhysicsProcess);
-    Event& makeEvent() const;
+    EventGenerator(PhaseSpaceSelector& ps);
+    makeEvent(Event& e) const;
     
     void displayStatisics() const;
     bool stopped() const { return stopped_};
+    
+    void setDebugLevel(const bool deep);
+//    void addStopCondition(StopCondition*);
    
+/*
+ Should these just be specific to the derived classes?
 protected:
     // Members
-    bool inPhaseSpace(Event& e) const;
+    bool tryEvent(Event& e) const;
     double weight(Event& e) const;
+ */
+    
+private:
+    virtual bool tryEvent(Event& e, bool& goodEvent) const;
     
 private:
     // Data
     const PhaseSpaceSelector& _allowedPhaseSpace;
-    const PhysicsProcess& _processToGenerate;
     
     mutable GenerationStatistics _myStatistics;
+//    int _stopConditionCheckFrequency;
+//    bool _stopped;
+//    sdk::vector<StopCondition*> _stopConditions;
     
-    int stopConditionCheckFrequency_;
-    bool stopped_;
-    sdk::list<StopCondition*> stopConditions_;
-    
-    
+    DebugLevel _debugLevel;
     
 };
 

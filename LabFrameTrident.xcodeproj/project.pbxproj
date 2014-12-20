@@ -7,11 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1CEFBB71A4090C900B21849 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBB61A4090C900B21849 /* main.cpp */; };
+		E1CEFBCA1A45A71800B21849 /* FourVector.cc in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBC91A45A71800B21849 /* FourVector.cc */; };
+		E1CEFBD41A45BA1800B21849 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBD31A45BA1800B21849 /* main.cpp */; };
+		E1CEFBD81A45BA3200B21849 /* trident_tester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBCB1A45A77500B21849 /* trident_tester.cpp */; };
+		E1CEFBD91A45BA4000B21849 /* FourVector.cc in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBC91A45A71800B21849 /* FourVector.cc */; };
+		E1CEFBDA1A45CF7300B21849 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBB61A4090C900B21849 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E1CEFBB11A4090C900B21849 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		E1CEFBCF1A45BA1800B21849 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -28,14 +41,28 @@
 		E1CEFBBE1A40935E00B21849 /* EventGenerator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = EventGenerator.h; sourceTree = "<group>"; };
 		E1CEFBBF1A4097A400B21849 /* Event.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = Event.h; sourceTree = "<group>"; };
 		E1CEFBC01A4098EB00B21849 /* PhaseSpaceSelector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = PhaseSpaceSelector.h; sourceTree = "<group>"; };
-		E1CEFBC11A4098F900B21849 /* PhysicsProcess.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = PhysicsProcess.h; sourceTree = "<group>"; };
-		E1CEFBC21A40993200B21849 /* ElectronTridentProcess.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = ElectronTridentProcess.h; sourceTree = "<group>"; };
+		E1CEFBC11A4098F900B21849 /* TridentEventGenerator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = TridentEventGenerator.h; sourceTree = "<group>"; };
 		E1CEFBC31A409AA700B21849 /* GenerationStatistics.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = GenerationStatistics.h; sourceTree = "<group>"; };
 		E1CEFBC41A409B1600B21849 /* Particle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = Particle.h; sourceTree = "<group>"; };
+		E1CEFBC51A41D38F00B21849 /* SimplifiedAPEXPhaseSpaceSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplifiedAPEXPhaseSpaceSelector.h; sourceTree = "<group>"; };
+		E1CEFBC61A41DB2300B21849 /* DebugLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugLevel.h; sourceTree = "<group>"; };
+		E1CEFBC71A41DB3300B21849 /* ParticleType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParticleType.h; sourceTree = "<group>"; };
+		E1CEFBC81A41DB3E00B21849 /* FourVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourVector.h; sourceTree = "<group>"; };
+		E1CEFBC91A45A71800B21849 /* FourVector.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FourVector.cc; sourceTree = "<group>"; };
+		E1CEFBCB1A45A77500B21849 /* trident_tester.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; path = trident_tester.cpp; sourceTree = "<group>"; };
+		E1CEFBD11A45BA1800B21849 /* trident_tester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = trident_tester; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1CEFBD31A45BA1800B21849 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E1CEFBB01A4090C900B21849 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1CEFBCE1A45BA1800B21849 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				E1CEFBB51A4090C900B21849 /* LabFrameTrident */,
+				E1CEFBD21A45BA1800B21849 /* trident_tester */,
 				E1CEFBB41A4090C900B21849 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				E1CEFBB31A4090C900B21849 /* LabFrameTrident */,
+				E1CEFBD11A45BA1800B21849 /* trident_tester */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,12 +97,25 @@
 				E1CEFBBE1A40935E00B21849 /* EventGenerator.h */,
 				E1CEFBC31A409AA700B21849 /* GenerationStatistics.h */,
 				E1CEFBC41A409B1600B21849 /* Particle.h */,
-				E1CEFBC11A4098F900B21849 /* PhysicsProcess.h */,
-				E1CEFBC21A40993200B21849 /* ElectronTridentProcess.h */,
+				E1CEFBC11A4098F900B21849 /* TridentEventGenerator.h */,
 				E1CEFBC01A4098EB00B21849 /* PhaseSpaceSelector.h */,
+				E1CEFBC61A41DB2300B21849 /* DebugLevel.h */,
+				E1CEFBC71A41DB3300B21849 /* ParticleType.h */,
+				E1CEFBC81A41DB3E00B21849 /* FourVector.h */,
+				E1CEFBC91A45A71800B21849 /* FourVector.cc */,
+				E1CEFBCB1A45A77500B21849 /* trident_tester.cpp */,
+				E1CEFBC51A41D38F00B21849 /* SimplifiedAPEXPhaseSpaceSelector.h */,
 				E1CEFBBF1A4097A400B21849 /* Event.h */,
 			);
 			path = LabFrameTrident;
+			sourceTree = "<group>";
+		};
+		E1CEFBD21A45BA1800B21849 /* trident_tester */ = {
+			isa = PBXGroup;
+			children = (
+				E1CEFBD31A45BA1800B21849 /* main.cpp */,
+			);
+			path = trident_tester;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +138,23 @@
 			productReference = E1CEFBB31A4090C900B21849 /* LabFrameTrident */;
 			productType = "com.apple.product-type.tool";
 		};
+		E1CEFBD01A45BA1800B21849 /* trident_tester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1CEFBD51A45BA1800B21849 /* Build configuration list for PBXNativeTarget "trident_tester" */;
+			buildPhases = (
+				E1CEFBCD1A45BA1800B21849 /* Sources */,
+				E1CEFBCE1A45BA1800B21849 /* Frameworks */,
+				E1CEFBCF1A45BA1800B21849 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = trident_tester;
+			productName = trident_tester;
+			productReference = E1CEFBD11A45BA1800B21849 /* trident_tester */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -106,6 +165,9 @@
 				ORGANIZATIONNAME = "Natalia Toro";
 				TargetAttributes = {
 					E1CEFBB21A4090C900B21849 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					E1CEFBD01A45BA1800B21849 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
@@ -123,6 +185,7 @@
 			projectRoot = "";
 			targets = (
 				E1CEFBB21A4090C900B21849 /* LabFrameTrident */,
+				E1CEFBD01A45BA1800B21849 /* trident_tester */,
 			);
 		};
 /* End PBXProject section */
@@ -132,7 +195,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1CEFBB71A4090C900B21849 /* main.cpp in Sources */,
+				E1CEFBDA1A45CF7300B21849 /* main.cpp in Sources */,
+				E1CEFBCA1A45A71800B21849 /* FourVector.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1CEFBCD1A45BA1800B21849 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1CEFBD41A45BA1800B21849 /* main.cpp in Sources */,
+				E1CEFBD81A45BA3200B21849 /* trident_tester.cpp in Sources */,
+				E1CEFBD91A45BA4000B21849 /* FourVector.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +301,24 @@
 			};
 			name = Release;
 		};
+		E1CEFBD61A45BA1800B21849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E1CEFBD71A45BA1800B21849 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -244,6 +336,14 @@
 			buildConfigurations = (
 				E1CEFBBB1A4090C900B21849 /* Debug */,
 				E1CEFBBC1A4090C900B21849 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E1CEFBD51A45BA1800B21849 /* Build configuration list for PBXNativeTarget "trident_tester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1CEFBD61A45BA1800B21849 /* Debug */,
+				E1CEFBD71A45BA1800B21849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

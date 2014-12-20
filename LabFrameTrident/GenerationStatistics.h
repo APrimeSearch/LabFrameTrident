@@ -9,6 +9,8 @@
 #ifndef LabFrameTrident_GenerationStatistics_h
 #define LabFrameTrident_GenerationStatistics_h
 
+#include "EventGenerator.h"
+
 class GenerationStatistics {
     friend class EventGenerator;
     
