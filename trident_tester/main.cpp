@@ -8,8 +8,24 @@
 
 #include <iostream>
 
+int test_ParticleType();
+int test_FourVector();
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+    int i;
+    
+    if((i=test_FourVector()) !=0){
+        std::cout << "Four vector test failed!";
+        return i;
+    };
+    
+    
+    if((i=test_ParticleType()) !=0){
+        std::cout << "Particle type test failed!";
+        return i;
+    };
     return 0;
+    
 }
+

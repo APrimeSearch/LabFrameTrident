@@ -63,7 +63,7 @@ void FourVector::setSphericalT(double t, double rho, double theta, double phi)
 
 void FourVector::setCartesianLength(double len,double x, double y, double z)
 {
-    v_[0]=sqrt(len*len-x*x-y*y-z*z);
+    v_[0]=sqrt(len*len+x*x+y*y+z*z);
     v_[1]=x;
     v_[2]=y;
     v_[3]=z;
@@ -72,7 +72,7 @@ void FourVector::setCartesianLength(double len,double x, double y, double z)
 
 void FourVector::setSphericalLength(double len, double rho, double theta, double phi)
 {
-    v_[0]=sqrt(len*len-rho*rho);
+    v_[0]=sqrt(len*len+rho*rho);
     v_[1]=rho*sin(theta)*cos(phi);
     v_[2]=rho*sin(theta)*sin(phi);
     v_[3]=rho*cos(theta);
@@ -122,9 +122,9 @@ FourVector operator+ (const FourVector& v1, const FourVector& v2)
 
 double operator*(const FourVector&v1, const FourVector& v2)
 {
-    return (v1.T()*v2.T() +
-            v1.X()*v2.X() +
-            v1.Y()*v2.Y() +
+    return (v1.T()*v2.T() -
+            v1.X()*v2.X() -
+            v1.Y()*v2.Y() -
             v1.Z()*v2.Z());
 }
 
@@ -132,12 +132,21 @@ double operator*(const FourVector&v1, const FourVector& v2)
 /*************** IO Methods ******************/
 void FourVector::print(std::ostream& s) const
 {
-    using namespace std;
     s << std::setw(12) << std::setprecision(6) << T()
       << std::setw(12) << std::setprecision(6) << X()
       << std::setw(12) << std::setprecision(6) << Y()
       << std::setw(12) << std::setprecision(6) << Z()
-      << endl;
+      << std::endl;
 }
 
 
+std::ostream& operator<< (std::ostream& s, const FourVector& v1)
+{
+    
+    s << std::setw(12) << std::setprecision(6) << v1.T()
+      << std::setw(12) << std::setprecision(6) << v1.X()
+      << std::setw(12) << std::setprecision(6) << v1.Y()
+      << std::setw(12) << std::setprecision(6) << v1.Z()
+      << std::endl;
+    return s;
+}

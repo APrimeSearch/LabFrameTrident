@@ -13,19 +13,23 @@
 #include "ParticleType.h"
 
 class Particle {
-    ParticleType ptype;
-    FourVector p;  // momentum
-    FourVector vertex;  // vertex
+    ParticleType ptype_;
+    FourVector p_;  // momentum
+    FourVector vertex_;  // vertex
     
-    
+    static const ON_SHELL_TOLERANCE=1E-8;
     
 public:
-    Particle(ParticleType& ptype, FourVector);
+    Particle(const ParticleType& ptype, const FourVector& v );
+    Particle(const ParticleType& ptype, double p, double theta, double phi);
     
     bool onShell();
-    double E() const { return p.T();};
-    double p() const { return p.len3();};
-    double pt() const { return pow(p.X(),2)+pow(p.Y(),2);};
+    
+    double E() const { return p_.T();};
+    double pabs() const { return p_.len3();};
+    double pt() const { return p_.X()*p_.X()+p_.Y()*p_.Y();};
+    const FourVector& p() const { return p_;};
+    
 };
 
 

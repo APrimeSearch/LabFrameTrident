@@ -62,5 +62,7 @@ public:
 FourVector operator+ (const FourVector& v1, const FourVector& v2);
 double operator* (const FourVector& v1, const FourVector& v2);
 
+std::ostream& operator<< (std::ostream& s, const FourVector& v1);
+
 
 #endif

@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		E1CEFBCA1A45A71800B21849 /* FourVector.cc in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBC91A45A71800B21849 /* FourVector.cc */; };
 		E1CEFBD41A45BA1800B21849 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBD31A45BA1800B21849 /* main.cpp */; };
-		E1CEFBD81A45BA3200B21849 /* trident_tester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBCB1A45A77500B21849 /* trident_tester.cpp */; };
+		E1CEFBD81A45BA3200B21849 /* test_FourVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBCB1A45A77500B21849 /* test_FourVector.cpp */; };
 		E1CEFBD91A45BA4000B21849 /* FourVector.cc in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBC91A45A71800B21849 /* FourVector.cc */; };
 		E1CEFBDA1A45CF7300B21849 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBB61A4090C900B21849 /* main.cpp */; };
+		E1CEFBDC1A45D4AA00B21849 /* ParticleType.cc in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBDB1A45D4AA00B21849 /* ParticleType.cc */; };
+		E1CEFBDD1A45D4AA00B21849 /* ParticleType.cc in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBDB1A45D4AA00B21849 /* ParticleType.cc */; };
+		E1CEFBDF1A45D7A900B21849 /* test_ParticleType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBDE1A45D7A900B21849 /* test_ParticleType.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,9 +52,11 @@
 		E1CEFBC71A41DB3300B21849 /* ParticleType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParticleType.h; sourceTree = "<group>"; };
 		E1CEFBC81A41DB3E00B21849 /* FourVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourVector.h; sourceTree = "<group>"; };
 		E1CEFBC91A45A71800B21849 /* FourVector.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FourVector.cc; sourceTree = "<group>"; };
-		E1CEFBCB1A45A77500B21849 /* trident_tester.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; path = trident_tester.cpp; sourceTree = "<group>"; };
+		E1CEFBCB1A45A77500B21849 /* test_FourVector.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = test_FourVector.cpp; path = ../LabFrameTrident/test_FourVector.cpp; sourceTree = "<group>"; };
 		E1CEFBD11A45BA1800B21849 /* trident_tester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = trident_tester; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CEFBD31A45BA1800B21849 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E1CEFBDB1A45D4AA00B21849 /* ParticleType.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleType.cc; sourceTree = "<group>"; };
+		E1CEFBDE1A45D7A900B21849 /* test_ParticleType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_ParticleType.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +106,9 @@
 				E1CEFBC01A4098EB00B21849 /* PhaseSpaceSelector.h */,
 				E1CEFBC61A41DB2300B21849 /* DebugLevel.h */,
 				E1CEFBC71A41DB3300B21849 /* ParticleType.h */,
+				E1CEFBDB1A45D4AA00B21849 /* ParticleType.cc */,
 				E1CEFBC81A41DB3E00B21849 /* FourVector.h */,
 				E1CEFBC91A45A71800B21849 /* FourVector.cc */,
-				E1CEFBCB1A45A77500B21849 /* trident_tester.cpp */,
 				E1CEFBC51A41D38F00B21849 /* SimplifiedAPEXPhaseSpaceSelector.h */,
 				E1CEFBBF1A4097A400B21849 /* Event.h */,
 			);
@@ -113,6 +118,8 @@
 		E1CEFBD21A45BA1800B21849 /* trident_tester */ = {
 			isa = PBXGroup;
 			children = (
+				E1CEFBCB1A45A77500B21849 /* test_FourVector.cpp */,
+				E1CEFBDE1A45D7A900B21849 /* test_ParticleType.cpp */,
 				E1CEFBD31A45BA1800B21849 /* main.cpp */,
 			);
 			path = trident_tester;
@@ -195,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1CEFBDC1A45D4AA00B21849 /* ParticleType.cc in Sources */,
 				E1CEFBDA1A45CF7300B21849 /* main.cpp in Sources */,
 				E1CEFBCA1A45A71800B21849 /* FourVector.cc in Sources */,
 			);
@@ -205,7 +213,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1CEFBD41A45BA1800B21849 /* main.cpp in Sources */,
-				E1CEFBD81A45BA3200B21849 /* trident_tester.cpp in Sources */,
+				E1CEFBDF1A45D7A900B21849 /* test_ParticleType.cpp in Sources */,
+				E1CEFBDD1A45D4AA00B21849 /* ParticleType.cc in Sources */,
+				E1CEFBD81A45BA3200B21849 /* test_FourVector.cpp in Sources */,
 				E1CEFBD91A45BA4000B21849 /* FourVector.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
