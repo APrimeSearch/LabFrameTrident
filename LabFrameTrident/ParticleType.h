@@ -30,7 +30,8 @@ public:
     int pid() const { return pid_;};
     std::string name() const { return name_;};
     
-    
+    double p(double E) const;
+    double E(double p) const;
     
 };
 

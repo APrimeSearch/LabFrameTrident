@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include "ParticleType.h"
+#include <cmath>
 
 ParticleType::ParticleType(std::string name,int pid,int charge3,double mass):
 name_(name),pid_(pid),charge3_(charge3),mass_(mass)
@@ -18,3 +19,12 @@ ParticleType ParticleType::antiparticle(const std::string newname) const
     return ParticleType(newname,-pid_,-charge3_,mass_);
 }
 
+double ParticleType::p(double E) const
+{
+    return sqrt(E*E-mass_*mass_);
+}
+
+double ParticleType::E(double p) const
+{
+    return sqrt(p*p+mass_*mass_);
+}

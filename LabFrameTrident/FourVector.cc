@@ -146,7 +146,6 @@ std::ostream& operator<< (std::ostream& s, const FourVector& v1)
     s << std::setw(12) << std::setprecision(6) << v1.T()
       << std::setw(12) << std::setprecision(6) << v1.X()
       << std::setw(12) << std::setprecision(6) << v1.Y()
-      << std::setw(12) << std::setprecision(6) << v1.Z()
-      << std::endl;
+      << std::setw(12) << std::setprecision(6) << v1.Z();
     return s;
 }
