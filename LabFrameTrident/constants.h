@@ -11,4 +11,6 @@
 
 const double PI=acos(-1);
 
+const double amuInGeV=0.931494061;
+
 #endif
