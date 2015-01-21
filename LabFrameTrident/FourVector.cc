@@ -9,6 +9,7 @@
 #include "FourVector.h"
 #include <cmath>
 #include <iomanip>
+#include <sstream>
 
 /**************** Constructors (public) ************/
 FourVector::FourVector()
@@ -120,6 +121,14 @@ FourVector operator+ (const FourVector& v1, const FourVector& v2)
                       v1.Z()+v2.Z());
 }
 
+FourVector operator- (const FourVector& v1, const FourVector& v2)
+{
+    return FourVector(v1.T()-v2.T(),
+                      v1.X()-v2.X(),
+                      v1.Y()-v2.Y(),
+                      v1.Z()-v2.Z());
+}
+
 double operator*(const FourVector&v1, const FourVector& v2)
 {
     return (v1.T()*v2.T() -
@@ -129,23 +138,30 @@ double operator*(const FourVector&v1, const FourVector& v2)
 }
 
 
-/*************** IO Methods ******************/
-void FourVector::print(std::ostream& s) const
+bool operator==(const FourVector&v1, const FourVector& v2)
 {
+    return (v1.T() == v2.T() &&
+            v1.X() == v2.X() &&
+            v1.Y() == v2.Y() &&
+            v1.Z() == v2.Z());
+}
+
+
+
+/*************** IO Methods ******************/
+std::string FourVector::print() const
+{
+    std::ostringstream s;
     s << std::setw(12) << std::setprecision(6) << T()
       << std::setw(12) << std::setprecision(6) << X()
       << std::setw(12) << std::setprecision(6) << Y()
-      << std::setw(12) << std::setprecision(6) << Z()
-      << std::endl;
+      << std::setw(12) << std::setprecision(6) << Z();
+    return s.str();
 }
 
 
 std::ostream& operator<< (std::ostream& s, const FourVector& v1)
 {
-    
-    s << std::setw(12) << std::setprecision(6) << v1.T()
-      << std::setw(12) << std::setprecision(6) << v1.X()
-      << std::setw(12) << std::setprecision(6) << v1.Y()
-      << std::setw(12) << std::setprecision(6) << v1.Z();
+    s << v1.print();
     return s;
 }

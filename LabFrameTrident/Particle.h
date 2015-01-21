@@ -10,6 +10,7 @@
 #define LabFrameTrident_Particle_h
 
 #include <ostream>
+#include <string>
 #include "FourVector.h"
 #include "ParticleType.h"
 
@@ -30,6 +31,8 @@ public:
     bool onShell() const;
     void offShellDiagnostics(std::ostream& s) const;
     
+    std::string printP() const;
+    std::string printPV() const;
     
     // Basic inline kinematics functions
     double E() const { return p_.T();};
@@ -41,7 +44,10 @@ public:
     void setVertex(const FourVector& v) { vertex_=v;};
     void displaceVertex(const FourVector& dv) { vertex_=dv;};
     
+    const ParticleType& ptype() const {return ptype_;};
 };
+
+std::ostream& operator<< (std::ostream& s, const Particle& p);
 
 
 #endif

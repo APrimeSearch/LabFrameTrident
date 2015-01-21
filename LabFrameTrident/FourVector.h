@@ -47,8 +47,7 @@ public:
     double Y() const { return v_[2]; }
     double Z() const { return v_[3]; }
     
-    void print(std::ostream& s) const;
-    void print() const { print(cout); return; };
+    std::string print() const;
     
 /*  Do we need these?
     void setT(double t)  { v_[0]=t; }
@@ -60,7 +59,9 @@ public:
 };
 
 FourVector operator+ (const FourVector& v1, const FourVector& v2);
+FourVector operator- (const FourVector& v1, const FourVector& v2);
 double operator* (const FourVector& v1, const FourVector& v2);
+bool operator== (const FourVector& v1, const FourVector& v2);
 
 std::ostream& operator<< (std::ostream& s, const FourVector& v1);
 

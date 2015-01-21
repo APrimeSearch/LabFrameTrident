@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E131D28E1A4CA495000931D4 /* SimplifiedAPEXPhaseSpaceSelector.cc in Sources */ = {isa = PBXBuildFile; fileRef = E131D28D1A4CA495000931D4 /* SimplifiedAPEXPhaseSpaceSelector.cc */; };
+		E131D28F1A4CA495000931D4 /* SimplifiedAPEXPhaseSpaceSelector.cc in Sources */ = {isa = PBXBuildFile; fileRef = E131D28D1A4CA495000931D4 /* SimplifiedAPEXPhaseSpaceSelector.cc */; };
+		E131D2911A4CAAB0000931D4 /* PhaseSpaceSelector.cc in Sources */ = {isa = PBXBuildFile; fileRef = E131D2901A4CAAB0000931D4 /* PhaseSpaceSelector.cc */; };
+		E131D2921A4CAAB0000931D4 /* PhaseSpaceSelector.cc in Sources */ = {isa = PBXBuildFile; fileRef = E131D2901A4CAAB0000931D4 /* PhaseSpaceSelector.cc */; };
+		E131D2941A68697C000931D4 /* test_SimplifiedAPEXPhaseSpaceSelector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E131D2931A68697C000931D4 /* test_SimplifiedAPEXPhaseSpaceSelector.cpp */; };
 		E1CEFBCA1A45A71800B21849 /* FourVector.cc in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBC91A45A71800B21849 /* FourVector.cc */; };
 		E1CEFBD41A45BA1800B21849 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBD31A45BA1800B21849 /* main.cpp */; };
 		E1CEFBD81A45BA3200B21849 /* test_FourVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBCB1A45A77500B21849 /* test_FourVector.cpp */; };
@@ -18,6 +23,9 @@
 		E1CEFBE11A45D9CF00B21849 /* Particle.cc in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBE01A45D9CF00B21849 /* Particle.cc */; };
 		E1CEFBE21A45D9CF00B21849 /* Particle.cc in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBE01A45D9CF00B21849 /* Particle.cc */; };
 		E1CEFBE51A45E08000B21849 /* test_Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBE31A45E08000B21849 /* test_Particle.cpp */; };
+		E1CEFBE71A45E67F00B21849 /* Event.cc in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBE61A45E67F00B21849 /* Event.cc */; };
+		E1CEFBE81A45E67F00B21849 /* Event.cc in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBE61A45E67F00B21849 /* Event.cc */; };
+		E1CEFBEB1A45E69200B21849 /* test_Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBE91A45E69200B21849 /* test_Event.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +50,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E131D28D1A4CA495000931D4 /* SimplifiedAPEXPhaseSpaceSelector.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimplifiedAPEXPhaseSpaceSelector.cc; sourceTree = "<group>"; };
+		E131D2901A4CAAB0000931D4 /* PhaseSpaceSelector.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhaseSpaceSelector.cc; sourceTree = "<group>"; };
+		E131D2931A68697C000931D4 /* test_SimplifiedAPEXPhaseSpaceSelector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_SimplifiedAPEXPhaseSpaceSelector.cpp; sourceTree = "<group>"; };
+		E131D2951A69BCEE000931D4 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		E1CEFBB31A4090C900B21849 /* LabFrameTrident */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LabFrameTrident; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CEFBB61A4090C900B21849 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E1CEFBBE1A40935E00B21849 /* EventGenerator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = EventGenerator.h; sourceTree = "<group>"; };
@@ -62,6 +74,8 @@
 		E1CEFBDE1A45D7A900B21849 /* test_ParticleType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_ParticleType.cpp; sourceTree = "<group>"; };
 		E1CEFBE01A45D9CF00B21849 /* Particle.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cc; sourceTree = "<group>"; };
 		E1CEFBE31A45E08000B21849 /* test_Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_Particle.cpp; sourceTree = "<group>"; };
+		E1CEFBE61A45E67F00B21849 /* Event.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cc; sourceTree = "<group>"; };
+		E1CEFBE91A45E69200B21849 /* test_Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_Event.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +130,11 @@
 				E1CEFBC81A41DB3E00B21849 /* FourVector.h */,
 				E1CEFBC91A45A71800B21849 /* FourVector.cc */,
 				E1CEFBC51A41D38F00B21849 /* SimplifiedAPEXPhaseSpaceSelector.h */,
+				E131D28D1A4CA495000931D4 /* SimplifiedAPEXPhaseSpaceSelector.cc */,
+				E131D2901A4CAAB0000931D4 /* PhaseSpaceSelector.cc */,
+				E131D2951A69BCEE000931D4 /* constants.h */,
 				E1CEFBBF1A4097A400B21849 /* Event.h */,
+				E1CEFBE61A45E67F00B21849 /* Event.cc */,
 			);
 			path = LabFrameTrident;
 			sourceTree = "<group>";
@@ -125,9 +143,11 @@
 			isa = PBXGroup;
 			children = (
 				E1CEFBCB1A45A77500B21849 /* test_FourVector.cpp */,
+				E1CEFBE91A45E69200B21849 /* test_Event.cpp */,
 				E1CEFBE31A45E08000B21849 /* test_Particle.cpp */,
 				E1CEFBDE1A45D7A900B21849 /* test_ParticleType.cpp */,
 				E1CEFBD31A45BA1800B21849 /* main.cpp */,
+				E131D2931A68697C000931D4 /* test_SimplifiedAPEXPhaseSpaceSelector.cpp */,
 			);
 			path = trident_tester;
 			sourceTree = "<group>";
@@ -210,7 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1CEFBDC1A45D4AA00B21849 /* ParticleType.cc in Sources */,
+				E131D2911A4CAAB0000931D4 /* PhaseSpaceSelector.cc in Sources */,
+				E131D28E1A4CA495000931D4 /* SimplifiedAPEXPhaseSpaceSelector.cc in Sources */,
 				E1CEFBDA1A45CF7300B21849 /* main.cpp in Sources */,
+				E1CEFBE71A45E67F00B21849 /* Event.cc in Sources */,
 				E1CEFBCA1A45A71800B21849 /* FourVector.cc in Sources */,
 				E1CEFBE11A45D9CF00B21849 /* Particle.cc in Sources */,
 			);
@@ -223,9 +246,14 @@
 				E1CEFBD41A45BA1800B21849 /* main.cpp in Sources */,
 				E1CEFBE21A45D9CF00B21849 /* Particle.cc in Sources */,
 				E1CEFBDF1A45D7A900B21849 /* test_ParticleType.cpp in Sources */,
+				E131D2941A68697C000931D4 /* test_SimplifiedAPEXPhaseSpaceSelector.cpp in Sources */,
+				E1CEFBEB1A45E69200B21849 /* test_Event.cpp in Sources */,
 				E1CEFBDD1A45D4AA00B21849 /* ParticleType.cc in Sources */,
+				E131D28F1A4CA495000931D4 /* SimplifiedAPEXPhaseSpaceSelector.cc in Sources */,
 				E1CEFBD81A45BA3200B21849 /* test_FourVector.cpp in Sources */,
 				E1CEFBD91A45BA4000B21849 /* FourVector.cc in Sources */,
+				E1CEFBE81A45E67F00B21849 /* Event.cc in Sources */,
+				E131D2921A4CAAB0000931D4 /* PhaseSpaceSelector.cc in Sources */,
 				E1CEFBE51A45E08000B21849 /* test_Particle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +386,7 @@
 				E1CEFBBC1A4090C900B21849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1CEFBD51A45BA1800B21849 /* Build configuration list for PBXNativeTarget "trident_tester" */ = {
 			isa = XCConfigurationList;
@@ -366,6 +395,7 @@
 				E1CEFBD71A45BA1800B21849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

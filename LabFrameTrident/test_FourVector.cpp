@@ -20,13 +20,10 @@ int test_FourVector()
     FourVector v2(1,0,1,0);
     FourVector v3({2,0,-1,0});
     
-    cout << " v0 = ";
-    v.print();
+    cout << " v0 = " << v.print() << endl;
     
-    cout << " v2 = ";
-    v2.print();
-    cout << " v3 = ";
-    v3.print();
+    cout << " v2 = " << v2.print() << endl;
+    cout << " v3 = " << v3.print() << endl;
     
     cout << " v2.v3 = " << v2*v3 << endl;
 

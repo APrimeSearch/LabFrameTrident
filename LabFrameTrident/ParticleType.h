@@ -35,6 +35,8 @@ public:
     
 };
 
+bool operator==(const ParticleType& pt1, const ParticleType& pt2);
+
 /********** Standard Particle Types ******************/
 
 const ParticleType eminus("electron",-11,-3,0.000511);

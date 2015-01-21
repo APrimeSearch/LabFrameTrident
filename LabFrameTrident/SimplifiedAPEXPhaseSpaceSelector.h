@@ -9,23 +9,59 @@
 #ifndef LabFrameTrident_SimplifiedAPEXPhaseSpaceSelector_h
 #define LabFrameTrident_SimplifiedAPEXPhaseSpaceSelector_h
 
+#include "PhaseSpaceSelector.h"
+#include "Particle.h"
+#include "Event.h"
+#include "FourVector.h"
 
-class SimplifiedAPEXPhaseSpaceSelector: PhaseSpaceSelector {
+class SimplifiedAPEXPhaseSpaceSelector: public PhaseSpaceSelector {
     
 public:
     
-    SimplifiedAPEXPhaseSpaceSelector(); 
+    SimplifiedAPEXPhaseSpaceSelector(double pmax, double thetaxmin, double thetaxmax, double thetaymax, double deltapoverp, double p0);
+
     
-    bool checkAcceptance(const Particle& p, const EventGlobalData& gd) const;
-    bool checkAngularAcceptance(const Particle& p, const EventGlobalData& gd) const;
+    void randomFourVectorWithinAcceptance
+        (const ParticleType& ptype,
+         const Event& e,
+         FourVector& v,
+         double& selectionWeight) const;
+    void randomUnitVectorWithinAngularAcceptance
+        (const ParticleType& ptype,
+         const Event& e,
+         double& theta, double& phi,
+         double& selectionWeight) const;
+
+    bool passAcceptance(const Event& e, bool debug) const;
+
+    // Defined in base class already
+//    bool passAcceptance(const Event& e) const { return passAcceptance(e,false);}
     
-    randomFourVectorWithinAcceptance(ParticleType& ptype, Particle& p, const EventGlobalData& gd, double& selectionWeight) const;
-    randomUnitVectorWithinAngularAcceptance(ParticleType& ptype, Particle& p, const EventGlobalData& gd, double& selectionWeight) const;
     
-    bool passAcceptance(const Event& e) const;
+    // Useful predefined phase-space selections
+    
+    // The settings used in LHEtoPGScut
+    static SimplifiedAPEXPhaseSpaceSelector* apexOldReachSelector(double pmax, double p0);
+    
+    // Requires only that electron & positron be in left/right hemispheres
+    static SimplifiedAPEXPhaseSpaceSelector* hemisphereSelector(double pmax);
+
+    // Trivial selector
+    static SimplifiedAPEXPhaseSpaceSelector* trivialAPEXstyleSelector(double pmax);
     
     
 private:
+    void randomUnitVectorInSpectrometer
+    (bool Left,
+     double& theta, double& phi,
+     double& selectionWeight) const;
+    void randomFourVectorInSpectrometer
+    (bool Left, double mass,
+     FourVector& v,
+     double& selectionWeight) const;
+    
+    bool inSpectrometer(bool Left, const FourVector& p) const;
+
     
     double thetaxmin_;
     double thetaxmax_;
@@ -35,6 +71,6 @@ private:
     
 };
 
-#endif
+
 
 #endif

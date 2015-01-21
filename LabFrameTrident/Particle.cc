@@ -10,7 +10,9 @@
 #include "ParticleType.h"
 #include "FourVector.h"
 #include <iostream>
+#include <iomanip>
 #include <cmath>
+#include <sstream>
 
 
 /************** Constructors *****************/
@@ -52,7 +54,7 @@ bool Particle::onShell() const
     double m0=ptype_.mass();
     double mp=p_.len();
     
-    if(mp>0 && fabs(mp-m0)/m0 < ON_SHELL_TOLERANCE) return true;
+    if(mp>0 && fabs(mp-m0)/m0 < ON_SHELL_TOLERANCE && E()>0) return true;
     else return false;
 }
 
@@ -67,4 +69,18 @@ void Particle::offShellDiagnostics(std::ostream &s) const
         s << "** ON-SHELL FAILURE: m = " << m0 << " len(p) = " << mp << std::endl;
     
     return;
+}
+
+/************** I/O Methods and Operator *****************/
+std::string Particle::printP() const
+{
+    std::ostringstream s("");
+    s << std::setw(6) << ptype_.pid() << " " << p_ << std::endl;
+    return s.str();
+}
+
+std::ostream& operator<< (std::ostream& s, const Particle& p)
+{
+    s << p.printP();
+    return s;
 }

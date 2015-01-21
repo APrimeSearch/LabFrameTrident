@@ -10,10 +10,11 @@
 #define LabFrameTrident_DebugLevel_h
 
 class DebugLevel {
-  <#instance variables#>
-
+    int i_;
+    
 public:
-  <#member functions#>
+    DebugLevel(int i): i_(i){};
+    // member functions
 };
 
 #endif
