@@ -12,6 +12,10 @@
 		E131D2911A4CAAB0000931D4 /* PhaseSpaceSelector.cc in Sources */ = {isa = PBXBuildFile; fileRef = E131D2901A4CAAB0000931D4 /* PhaseSpaceSelector.cc */; };
 		E131D2921A4CAAB0000931D4 /* PhaseSpaceSelector.cc in Sources */ = {isa = PBXBuildFile; fileRef = E131D2901A4CAAB0000931D4 /* PhaseSpaceSelector.cc */; };
 		E131D2941A68697C000931D4 /* test_SimplifiedAPEXPhaseSpaceSelector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E131D2931A68697C000931D4 /* test_SimplifiedAPEXPhaseSpaceSelector.cpp */; };
+		E131D2971A703E6B000931D4 /* TridentEventGenerator.cc in Sources */ = {isa = PBXBuildFile; fileRef = E131D2961A703E6B000931D4 /* TridentEventGenerator.cc */; };
+		E131D2981A703E6B000931D4 /* TridentEventGenerator.cc in Sources */ = {isa = PBXBuildFile; fileRef = E131D2961A703E6B000931D4 /* TridentEventGenerator.cc */; };
+		E131D29B1A704972000931D4 /* Nucleus.cc in Sources */ = {isa = PBXBuildFile; fileRef = E131D2991A704972000931D4 /* Nucleus.cc */; };
+		E131D29C1A704972000931D4 /* Nucleus.cc in Sources */ = {isa = PBXBuildFile; fileRef = E131D2991A704972000931D4 /* Nucleus.cc */; };
 		E1CEFBCA1A45A71800B21849 /* FourVector.cc in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBC91A45A71800B21849 /* FourVector.cc */; };
 		E1CEFBD41A45BA1800B21849 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBD31A45BA1800B21849 /* main.cpp */; };
 		E1CEFBD81A45BA3200B21849 /* test_FourVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CEFBCB1A45A77500B21849 /* test_FourVector.cpp */; };
@@ -54,6 +58,9 @@
 		E131D2901A4CAAB0000931D4 /* PhaseSpaceSelector.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhaseSpaceSelector.cc; sourceTree = "<group>"; };
 		E131D2931A68697C000931D4 /* test_SimplifiedAPEXPhaseSpaceSelector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_SimplifiedAPEXPhaseSpaceSelector.cpp; sourceTree = "<group>"; };
 		E131D2951A69BCEE000931D4 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		E131D2961A703E6B000931D4 /* TridentEventGenerator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TridentEventGenerator.cc; sourceTree = "<group>"; };
+		E131D2991A704972000931D4 /* Nucleus.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Nucleus.cc; sourceTree = "<group>"; };
+		E131D29A1A704972000931D4 /* Nucleus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nucleus.h; sourceTree = "<group>"; };
 		E1CEFBB31A4090C900B21849 /* LabFrameTrident */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LabFrameTrident; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CEFBB61A4090C900B21849 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E1CEFBBE1A40935E00B21849 /* EventGenerator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = EventGenerator.h; sourceTree = "<group>"; };
@@ -118,23 +125,26 @@
 			isa = PBXGroup;
 			children = (
 				E1CEFBB61A4090C900B21849 /* main.cpp */,
-				E1CEFBBE1A40935E00B21849 /* EventGenerator.h */,
 				E1CEFBC31A409AA700B21849 /* GenerationStatistics.h */,
-				E1CEFBC41A409B1600B21849 /* Particle.h */,
-				E1CEFBE01A45D9CF00B21849 /* Particle.cc */,
 				E1CEFBC11A4098F900B21849 /* TridentEventGenerator.h */,
-				E1CEFBC01A4098EB00B21849 /* PhaseSpaceSelector.h */,
-				E1CEFBC61A41DB2300B21849 /* DebugLevel.h */,
-				E1CEFBC71A41DB3300B21849 /* ParticleType.h */,
-				E1CEFBDB1A45D4AA00B21849 /* ParticleType.cc */,
-				E1CEFBC81A41DB3E00B21849 /* FourVector.h */,
-				E1CEFBC91A45A71800B21849 /* FourVector.cc */,
+				E131D2961A703E6B000931D4 /* TridentEventGenerator.cc */,
+				E1CEFBBE1A40935E00B21849 /* EventGenerator.h */,
 				E1CEFBC51A41D38F00B21849 /* SimplifiedAPEXPhaseSpaceSelector.h */,
 				E131D28D1A4CA495000931D4 /* SimplifiedAPEXPhaseSpaceSelector.cc */,
+				E1CEFBC01A4098EB00B21849 /* PhaseSpaceSelector.h */,
 				E131D2901A4CAAB0000931D4 /* PhaseSpaceSelector.cc */,
-				E131D2951A69BCEE000931D4 /* constants.h */,
 				E1CEFBBF1A4097A400B21849 /* Event.h */,
 				E1CEFBE61A45E67F00B21849 /* Event.cc */,
+				E131D2991A704972000931D4 /* Nucleus.cc */,
+				E131D29A1A704972000931D4 /* Nucleus.h */,
+				E1CEFBC41A409B1600B21849 /* Particle.h */,
+				E1CEFBE01A45D9CF00B21849 /* Particle.cc */,
+				E1CEFBC81A41DB3E00B21849 /* FourVector.h */,
+				E1CEFBC91A45A71800B21849 /* FourVector.cc */,
+				E1CEFBC71A41DB3300B21849 /* ParticleType.h */,
+				E1CEFBDB1A45D4AA00B21849 /* ParticleType.cc */,
+				E131D2951A69BCEE000931D4 /* constants.h */,
+				E1CEFBC61A41DB2300B21849 /* DebugLevel.h */,
 			);
 			path = LabFrameTrident;
 			sourceTree = "<group>";
@@ -229,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E131D29B1A704972000931D4 /* Nucleus.cc in Sources */,
 				E1CEFBDC1A45D4AA00B21849 /* ParticleType.cc in Sources */,
 				E131D2911A4CAAB0000931D4 /* PhaseSpaceSelector.cc in Sources */,
 				E131D28E1A4CA495000931D4 /* SimplifiedAPEXPhaseSpaceSelector.cc in Sources */,
@@ -236,6 +247,7 @@
 				E1CEFBE71A45E67F00B21849 /* Event.cc in Sources */,
 				E1CEFBCA1A45A71800B21849 /* FourVector.cc in Sources */,
 				E1CEFBE11A45D9CF00B21849 /* Particle.cc in Sources */,
+				E131D2971A703E6B000931D4 /* TridentEventGenerator.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +262,9 @@
 				E1CEFBEB1A45E69200B21849 /* test_Event.cpp in Sources */,
 				E1CEFBDD1A45D4AA00B21849 /* ParticleType.cc in Sources */,
 				E131D28F1A4CA495000931D4 /* SimplifiedAPEXPhaseSpaceSelector.cc in Sources */,
+				E131D29C1A704972000931D4 /* Nucleus.cc in Sources */,
 				E1CEFBD81A45BA3200B21849 /* test_FourVector.cpp in Sources */,
+				E131D2981A703E6B000931D4 /* TridentEventGenerator.cc in Sources */,
 				E1CEFBD91A45BA4000B21849 /* FourVector.cc in Sources */,
 				E1CEFBE81A45E67F00B21849 /* Event.cc in Sources */,
 				E131D2921A4CAAB0000931D4 /* PhaseSpaceSelector.cc in Sources */,

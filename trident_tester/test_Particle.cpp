@@ -36,6 +36,7 @@ int test_Particle()
     almostCollinearPhoton.setCartesianLength(0.,0.0001,0.00004,5.0);
     
     Particle offShell(eminus, electronMomentum+almostCollinearPhoton);
+    cout << "!! On-shell failure messages above are GOOD !!" << endl;
     
     cout << " Mass difference" << offShell.p().len()-eminus.mass();
     

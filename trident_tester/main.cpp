@@ -23,24 +23,24 @@ int main(int argc, const char * argv[]) {
         std::cout << "Four vector test failed!";
         return i;
     };
-    
+    */
     
     if((i=test_ParticleType()) !=0){
         std::cout << "Particle type test failed!";
         return i;
     };
-    return 0;
      
     if((i=test_Particle()) !=0){
         std::cout << "Particle test failed!";
         return i;
-    };*/
+    };
 
+    /*
     if((i=test_SimplifiedAPEXPhaseSpaceSelector()) !=0){
         std::cout << "Event test failed!";
         return i;
     };
-    
+    */
     if((i=test_Event()) !=0){
         std::cout << "Event test failed!";
         return i;

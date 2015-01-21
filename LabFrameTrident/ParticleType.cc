@@ -10,13 +10,13 @@
 #include "ParticleType.h"
 #include <cmath>
 
-ParticleType::ParticleType(std::string name,int pid,int charge3,double mass):
-name_(name),pid_(pid),charge3_(charge3),mass_(mass)
+ParticleType::ParticleType(std::string name,int pid,int charge,double mass):
+name_(name),pid_(pid),charge_(charge),mass_(mass)
 {};
 
 ParticleType ParticleType::antiparticle(const std::string newname) const
 {
-    return ParticleType(newname,-pid_,-charge3_,mass_);
+    return ParticleType(newname,-pid_,-charge_,mass_);
 }
 
 double ParticleType::p(double E) const
@@ -31,5 +31,5 @@ double ParticleType::E(double p) const
 
 
 bool operator==(const ParticleType& pt1, const ParticleType& pt2){
-    return (pt1.pid()==pt2.pid() && pt1.charge3()==pt2.charge3() && pt1.mass()==pt2.mass());
+    return (pt1.pid()==pt2.pid() && pt1.charge()==pt2.charge() && pt1.mass()==pt2.mass());
 }
