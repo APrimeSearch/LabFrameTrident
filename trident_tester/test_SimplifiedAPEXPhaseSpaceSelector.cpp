@@ -179,7 +179,12 @@ int test_SimplifiedAPEXPhaseSpaceSelector()
         return -1;
     }
 
-    nev=2e8;
+    //nev=4e7; // this high-statistics test takes a loong time....
+    // Result:
+    //  A volume (stats) = A: 1.70604e-06 (200000) B: 1.70659e-06 (877) C: 1.74489e-06 (1511)
+    //  B volume (stats) = B: 0.000385768 (200000) C: 0.000385898 (337113)
+    // for A, agrees within 4% expected sigma ~2.5%.
+    //
     // Now generate events in "c" acceptance...
     for(int iev=0;iev<nev; ++iev)
     {

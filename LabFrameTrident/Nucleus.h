@@ -27,4 +27,8 @@ public:
     double formFactor(double q2) const;
 };
 
+/********** Standard Nuclei ******************/
+
+const Nucleus Wpoint("Wpoint",184.0,74,FormFactorModel::Point);
+
 #endif /* defined(__LabFrameTrident__Nucleus__) */

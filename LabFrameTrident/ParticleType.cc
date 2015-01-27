@@ -29,7 +29,7 @@ double ParticleType::E(double p) const
     return sqrt(p*p+mass_*mass_);
 }
 
-
+/// DOESN'T CHECK NAME, DOES CHECK PID
 bool operator==(const ParticleType& pt1, const ParticleType& pt2){
     return (pt1.pid()==pt2.pid() && pt1.charge()==pt2.charge() && pt1.mass()==pt2.mass());
 }

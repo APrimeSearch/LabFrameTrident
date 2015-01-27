@@ -25,28 +25,33 @@ public:
 
     /* Note: Acceptance for particle P within event can depend on other particles in event. */
 
-    virtual void randomFourVectorWithinAcceptance
+    // The random vector functions are allowed to return false if the vector they find is NOT within acceptance, which should automatically "kill" the resulting event.  This facilitates the weight calculation for intricate geometric acceptances.
+    virtual bool randomFourVectorWithinAcceptance
         (const ParticleType& ptype,
          const Event& e,
          FourVector& v,
          double& selectionWeight) const = 0;
-    virtual void randomUnitVectorWithinAngularAcceptance(const ParticleType& ptype,
+    virtual bool randomUnitVectorWithinAngularAcceptance(const ParticleType& ptype,
          const Event& gd,
          double& theta, double& phi,
-         double& selectionWeight) const = 0;
+         double& selectionWeight,
+         double& minMomentum,
+         double& maxMomentum) const = 0;
     
     virtual bool passAcceptance(const Event& e, bool debug) const = 0;
     bool passAcceptance(const Event& e) const { return passAcceptance(e, false); }
 
+    double scaledRandom(double min, double max) const;
 
 protected:
-    double scaledRandom(double min, double max) const;
     void randomUnitVectorAnywhere
     (double& theta, double& phi,
      double& selectionWeight) const;
     void randomFourVectorAnywhere
     (double mass, FourVector& v,
      double& selectionWeight) const;
+    
+    double pmax() const { return pmax_;}
     
 private:
     

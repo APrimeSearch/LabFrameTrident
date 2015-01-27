@@ -103,6 +103,12 @@ double FourVector::len3() const
             v_[3]*v_[3]);
 }
 
+double FourVector::dotUnit3Vector(double theta,double phi) const
+{
+    return v_[1]*sin(theta)*cos(phi)+
+            v_[2]*sin(theta)*sin(phi)+
+            v_[3]*cos(theta);
+}
 
 /**************** Operators ************/
 

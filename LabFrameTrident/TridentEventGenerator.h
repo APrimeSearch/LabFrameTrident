@@ -13,16 +13,23 @@
 #ifndef LabFrameTrident_TridentEventGenerator_h
 #define LabFrameTrident_TridentEventGenerator_h
 
-class TridentEventGenerator: EventGenerator {
+#include "EventGenerator.h"
+
+class TridentEventGenerator: public EventGenerator {
     
 public:
-    TridentEventGenerator(PhaseSpaceSelector& ps);
+    TridentEventGenerator(PhaseSpaceSelector& ps, double mMin, double mMax);
+
+    bool tryEvent(
+                  double incidentEnergy,  // INPUT
+                  const Nucleus& nucleus, // INPUT
+                  Event& e) const; // OUTPUT
 
 private:
+    double matrixElement(const Event& e) const;
     
-    bool tryEvent(Event& e, bool& goodEvent) const;
+    double mMin_, mMax_;
     
-    double tridentMatrixElement(const Event& e);
 };
 
 #endif

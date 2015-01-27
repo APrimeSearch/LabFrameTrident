@@ -13,6 +13,7 @@ int test_ParticleType();
 int test_Particle();
 int test_Event();
 int test_SimplifiedAPEXPhaseSpaceSelector();
+int test_TridentEventGenerator(int ntry);
 
 int main(int argc, const char * argv[]) {
 
@@ -25,6 +26,7 @@ int main(int argc, const char * argv[]) {
     };
     */
     
+    /*
     if((i=test_ParticleType()) !=0){
         std::cout << "Particle type test failed!";
         return i;
@@ -34,17 +36,26 @@ int main(int argc, const char * argv[]) {
         std::cout << "Particle test failed!";
         return i;
     };
+    */
 
+    /*    if((i=test_Event()) !=0){
+     std::cout << "Event test failed!";
+     return i;
+     };
+     */
+    
     /*
     if((i=test_SimplifiedAPEXPhaseSpaceSelector()) !=0){
         std::cout << "Event test failed!";
         return i;
     };
     */
-    if((i=test_Event()) !=0){
-        std::cout << "Event test failed!";
+    
+    if((i=test_TridentEventGenerator(1000)) < 0){
+        std::cout << "Generator test failed!";
         return i;
     };
+    
     return 0;
     
 }

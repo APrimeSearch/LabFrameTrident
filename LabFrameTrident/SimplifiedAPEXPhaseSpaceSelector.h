@@ -20,17 +20,19 @@ public:
     
     SimplifiedAPEXPhaseSpaceSelector(double pmax, double thetaxmin, double thetaxmax, double thetaymax, double deltapoverp, double p0);
 
-    
-    void randomFourVectorWithinAcceptance
+    // The random vector functions in the parent class are allowed to return false if the vector they find is NOT within acceptance, which should automatically "kill" the resulting event.  This facilitates the weight calculation for intricate geometric acceptances.  But they always return True in this class.  
+    bool randomFourVectorWithinAcceptance
         (const ParticleType& ptype,
          const Event& e,
          FourVector& v,
          double& selectionWeight) const;
-    void randomUnitVectorWithinAngularAcceptance
+    bool randomUnitVectorWithinAngularAcceptance
         (const ParticleType& ptype,
          const Event& e,
          double& theta, double& phi,
-         double& selectionWeight) const;
+         double& selectionWeight,
+         double& minMomentum,
+         double& maxMomentum) const;
 
     bool passAcceptance(const Event& e, bool debug) const;
 

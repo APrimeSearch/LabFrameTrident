@@ -13,41 +13,51 @@
 #include "GenerationStatistics.h"
 #include "Event.h"
 #include "DebugLevel.h"
+#include "Nucleus.h"
 
 class EventGenerator
 {
 public:
     // Constructor
     EventGenerator(PhaseSpaceSelector& ps);
-    makeEvent(Event& e) const;
     
-    void displayStatisics() const;
-    bool stopped() const { return stopped_};
+//    void displayStatisics() const;
     
-    void setDebugLevel(const bool deep);
+    virtual bool tryEvent(
+                        double incidentEnergy,  // INPUT
+                        const Nucleus& nucleus, // INPUT
+                        Event& e) // OUTPUT
+            const = 0;
+
+protected:
+    const PhaseSpaceSelector& phaseSpace() const { return _allowedPhaseSpace; };
+    
+//bool stopped() const { return stopped_};
+    
+//    void setDebugLevel(const bool deep);
 //    void addStopCondition(StopCondition*);
    
 /*
- Should these just be specific to the derived classes?
+ Should these just be specific to the derived classes?  I think so.
 protected:
-    // Members
-    bool tryEvent(Event& e) const;
-    double weight(Event& e) const;
+ // Members
+ private:
+ virtual double matrixElement(Event& e) const = 0;
+
  */
-    
-private:
-    virtual bool tryEvent(Event& e, bool& goodEvent) const;
     
 private:
     // Data
     const PhaseSpaceSelector& _allowedPhaseSpace;
     
-    mutable GenerationStatistics _myStatistics;
+    
+// For functionality I may want to add later...
+//    mutable GenerationStatistics _myStatistics;
+
 //    int _stopConditionCheckFrequency;
 //    bool _stopped;
 //    sdk::vector<StopCondition*> _stopConditions;
-    
-    DebugLevel _debugLevel;
+//    DebugLevel _debugLevel;
     
 };
 

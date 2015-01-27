@@ -38,6 +38,8 @@ public:
     double len() const;  // Invariant length
     double len3() const; // 3-vector length
     
+    double dotUnit3Vector(double theta,double phi) const;
+    
 //    FourVector* operator+ (const FourVector& v1, const FourVector& v2);
     void operator+=(const FourVector& v1);
  

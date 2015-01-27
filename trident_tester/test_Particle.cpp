@@ -38,7 +38,7 @@ int test_Particle()
     Particle offShell(eminus, electronMomentum+almostCollinearPhoton);
     cout << "!! On-shell failure messages above are GOOD !!" << endl;
     
-    cout << " Mass difference" << offShell.p().len()-eminus.mass();
+    cout << " Mass difference" << offShell.p().len()-eminus.mass() << endl;
     
     return 0;
 }

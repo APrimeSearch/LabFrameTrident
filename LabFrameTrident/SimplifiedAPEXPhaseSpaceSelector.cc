@@ -34,23 +34,31 @@ PhaseSpaceSelector(pmax)
  First two arguments (ptype, e) are input arguments used to determine acceptance.
  Last three arguments (theta, phi, selectionweight) are outputs.
  */
-void SimplifiedAPEXPhaseSpaceSelector::randomUnitVectorWithinAngularAcceptance
+bool SimplifiedAPEXPhaseSpaceSelector::randomUnitVectorWithinAngularAcceptance
     (const ParticleType &ptype,  // Input: particle type of the new particle
      const Event &e,             // Input: event to which one would add particle
      double &theta,              // Output: randomly generated particle's theta (angle from z)
      double &phi,                // Output: randomly generated particle's phi (polar angle in xy plane)
-     double &dOmegaWeight)    // Output: weight (to sample dOmega)
+     double &dOmegaWeight,       // Output: weight (to sample dOmega)
+     double& minMomentum,        // Output: Min. length in acceptance
+     double& maxMomentum)        // Output: Max. length in acceptance
 const
 {
     // Pick a point in solid-angle acceptance.  For the first positron and electron in event, we impose the spectrometer cuts.  For all other particles, we let the particle land anywhere.
+    
+    minMomentum=p0_-deltap_;
+    maxMomentum=p0_+deltap_;
     
     if(ptype == eplus && e.finalStateMultiplicity(eplus)==0)
         randomUnitVectorInSpectrometer(false, theta, phi, dOmegaWeight);
     else if(ptype == eminus && e.finalStateMultiplicity(eminus)==0)
         randomUnitVectorInSpectrometer(true, theta, phi, dOmegaWeight);
-    else
+    else{
+        minMomentum=0;
+        maxMomentum=pmax();
         randomUnitVectorAnywhere(theta, phi, dOmegaWeight);
-    return;
+    }
+    return true;
 }
 
 /* randomFourVectorWithinAngularAcceptance
@@ -71,7 +79,7 @@ const
  First two arguments (ptype, e) are input arguments used to determine acceptance.
  Last two arguments (v, selectionweight) are outputs.
  */
-void SimplifiedAPEXPhaseSpaceSelector::randomFourVectorWithinAcceptance
+bool SimplifiedAPEXPhaseSpaceSelector::randomFourVectorWithinAcceptance
 (const ParticleType& ptype,          // Input: particle type
  const Event& e,                     // Input: event to which one would add particle
  FourVector& v,                      // Output: randomly selected four-vector
@@ -84,7 +92,7 @@ void SimplifiedAPEXPhaseSpaceSelector::randomFourVectorWithinAcceptance
         randomFourVectorInSpectrometer(true, ptype.mass(), v, dOmegaP2dPWeight);
     else
         randomFourVectorAnywhere(ptype.mass(), v, dOmegaP2dPWeight);
-    return;
+    return true;
 }
 
 
