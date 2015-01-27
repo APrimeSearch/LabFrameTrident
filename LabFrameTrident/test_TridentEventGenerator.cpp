@@ -18,8 +18,9 @@ int test_TridentEventGenerator(int ntry)
     
     TridentEventGenerator tri(*apex, 0.01, 1.0);
     
-    int ngood=0;
+    int ngood=0, nbigweight=0;
     double minweight=99., maxweight=0.;
+    double bigweightThresh=1e-21;
     for(int i=0; i<ntry ; i++)
     {
         Event ev;
@@ -30,6 +31,9 @@ int test_TridentEventGenerator(int ntry)
                 maxweight = ev.weight();
             if(ev.weight() < minweight)
                 minweight = ev.weight();
+           
+            if(ev.weight() > bigweightThresh)
+                nbigweight++;
             
 /*            cout << " =========== < GOOD EVENT > ==============" << std::endl;
             cout << ev << std::endl;
@@ -48,5 +52,7 @@ int test_TridentEventGenerator(int ntry)
     }
     cout << ngood << " out of " << ntry << " good events!" << std::endl;
     cout << " weight range " << minweight << " to " << maxweight << std::endl;
+    cout <<  nbigweight << " with weight exeeding " << bigweightThresh << std::endl;
+    
     return ngood;
 }
